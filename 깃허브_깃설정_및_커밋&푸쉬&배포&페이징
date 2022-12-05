@@ -85,3 +85,38 @@ git remote add origin https://github.com/ysh6758/just_shop.git
 
 //////////////////////////////////////////////////////////////////////
 스테이징하기
+
+모든(ALL) 파일 스테이징
+git add .
+
+/////////////////////////////////////////////////////////////////////////
+커밋하기 
+-m => message
+
+git commit -m '리액트 create-react-app 저스트 쇼핑몰'
+
+//////////////////////////////////////////////////////////////////////////
+푸쉬(push) 하기
+git push origin master
+
+$ git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 28830, done.
+Counting objects: 100% (28830/28830), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (22569/22569), done.
+Writing objects: 100% (28830/28830), 49.92 MiB | 7.24 MiB/s, done.
+Total 28830 (delta 5220), reused 28830 (delta 5220), pack-reused 0
+remote: Resolving deltas: 100% (5220/5220), done.
+To https://github.com/ysh6758/just_shop.git
+ * [new branch]        master -> master
+
+ //////////////////////////////////////////////////////////////////////////
+
+웹페이지 / 파일 수정
+
+다시 푸쉬
+
+git add .
+git commit -m '리액트 create-react-app 저스트 쇼핑몰'
+git push origin master
