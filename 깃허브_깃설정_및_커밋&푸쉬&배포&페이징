@@ -69,6 +69,7 @@ ysh6758@naver.com
 깃허브 원격지 라파지토리(저장소) 주소 추가 지정 origin(url)
   
 git remote add origin https://github.com/ysh6758/just_shop.git
+git remote add origin https://github.com/ysh6758/just_shop_cra.git
 
 원격지 리파지토리(저장소) 주소 확인하기
 git remote -v
@@ -84,19 +85,19 @@ git remote remove origin
 git remote add origin https://github.com/ysh6758/just_shop.git
 
 //////////////////////////////////////////////////////////////////////
-스테이징하기
+8. 스테이징하기
 
 모든(ALL) 파일 스테이징
 git add .
 
 /////////////////////////////////////////////////////////////////////////
-커밋하기 
+9. 커밋하기 
 -m => message
 
 git commit -m '리액트 create-react-app 저스트 쇼핑몰'
 
 //////////////////////////////////////////////////////////////////////////
-푸쉬(push) 하기
+10. 푸쉬(push) 하기
 git push origin master
 
 $ git push origin master
@@ -118,5 +119,90 @@ To https://github.com/ysh6758/just_shop.git
 다시 푸쉬
 
 git add .
-git commit -m '리액트 create-react-app 저스트 쇼핑몰'
+git commit -m '리액트 create-react-app 저스트 쇼핑몰 확장자 js => jsx'
 git push origin master
+
+//////////////////////////////////////////////////////////////////////
+11. 배포하기(페이징)
+
+1) 깃허브 페이지 상단메뉴 Settings 클릭
+2) 좌측 중간 하단에 Pages 메뉴 클릭
+3) 우측에 GitHub Pages
+4) Branch
+    GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository. Learn more.
+
+    None / Save
+    None 클릭 셀렉트 박스 열리면
+    master를 선택 => 우측 Save 클릭
+
+5) 새로고침
+    CTRL + SHIFT + R
+    캐시까지 삭제하는 새로고침하기
+
+    Your site is live at https://ysh6758.github.io/just_shop/
+
+    배포주소
+    https://ysh6758.github.io/just_shop/
+
+    30초 ~ 1분 대기
+    그리고 접속
+
+6) Deployment 도움사이트 중간 아래
+ => GitHub Pages로 내려온다.
+
+    step 1: Add homepage to package.json
+////////////////////////////////////////////////////
+    package.json => 깃허브 배포주소 속성과 주소 추가
+////////////////////////////////////////////////////
+    포트폴리오 프로젝트
+    package.json 에디터에서 연다.
+
+    맨 아래쪽에 추가한다.
+    "homepage": "https://ysh6758.github.io/just_shop/"
+
+
+Step 2: Install gh-pages and add deploy to scripts in package.json
+//////////////////////////////////////////////////////////////////////
+gh-pages => npm i gh-pages 설치
+            npm Install --save gh-pages
+//////////////////////////////////////////////////////////////////////
+
+
+Step 3: Deploy the site by running npm run deploy
+//////////////////////////////////////////////////////////////////////
+npm run deploy
+//////////////////////////////////////////////////////////////////////
+
+
+12. 웹브라우저에 배포주소로 연다
+    웹페이지 열린다. 배포 끝
+
+
+빌드하기 (생략가능)
+
+npm run build
+
+
+///////////////////////////////////////
+원본 소스만 올리기
+
+기존 주소 삭제
+git remote remove origin
+
+삭제주소 확인
+git remote -v
+
+재 지정하기
+git remote add origin https://github.com/ysh6758/just_shop_cra.git
+
+주소확인
+git remote -v
+origin  https://github.com/ysh6758/just_shop_cra.git (fetch)
+origin  https://github.com/ysh6758/just_shop_cra.git (push)
+
+git add . 
+git commit -m '저스트 쇼핑몰 CRA 원본소스'
+git push origin master
+
+새로고침 소스 원본 확인 끝
+버전관리 프로젝트 개발
